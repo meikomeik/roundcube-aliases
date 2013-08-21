@@ -146,7 +146,7 @@ class aliases extends rcube_plugin {
 			}
 		else foreach($this->alias as $idx => $alias) {
 			$alias_name = $alias['name'];
-			$tmp_output = new rcube_template('settings');
+                        $tmp_output = new rcmail_output_html('settings');
 			$this->api->output->command('aliases_update_list', $idx == 0 ? 'add-first' : 'add', 'rcmrow' . $idx, Q($alias_name));
 			}
 
